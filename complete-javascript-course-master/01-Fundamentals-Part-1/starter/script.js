@@ -149,21 +149,52 @@ const ageUser = now - 2019;
 //     console.log('Height is UNDEFINED');
 // }
 
-const age = 18;
-if (age === 18) console.log("Welcome to adulthood");
+// const age = 18;
+// if (age === 18) console.log("Welcome to adulthood");
 
-const favoriteNum = Number(prompt("What is your favorite number?"));
+// const favoriteNum = Number(prompt("What is your favorite number?"));
 
-// if (favoriteNum == 23) { // Type Coercion example
-//   console.log("Cool 23 is a great number");
+// // if (favoriteNum == 23) { // Type Coercion example
+// //   console.log("Cool 23 is a great number");
+// // }
+
+// if (favoriteNum === 23) {
+//   console.log("Great Number!!!");
+// } else if (favoriteNum === 7) {
+//   console.log(" 7 is also a great number!");
+// } else {
+//   console.log("Number not 23 or 7");
 // }
 
-if (favoriteNum === 23) {
-  console.log("Great Number!!!");
-} else if (favoriteNum === 7) {
-  console.log(" 7 is also a great number!");
-} else {
-  console.log("Number not 23 or 7");
-}
+// if (favoriteNum !== 23) console.log("Why not 23?");
 
-if (favoriteNum !== 23) console.log("Why not 23?");
+//Basic Boolean Logic: The AND, OR && NOT Operators
+
+// let hasDriversLicense = false;
+// let hasGoodVision = true;
+
+// if (!hasDriversLicense || !hasGoodVision) {
+//   console.log("Prerequisites not met 🚫");
+// } else if (hasDriversLicense && hasGoodVision) {
+//   console.log("Engine started: Vroom Vroom Vroom 🚗");
+// } else {
+//   console.log("Not valid data");
+// }
+
+// Coding Challenge if/else statements
+
+// let teamDolphinsScore = (97 + 112 + 101) / 3;
+// let teamKoalasScore = (109 + 95 + 106) / 3;
+
+// if (teamDolphinsScore > teamKoalasScore && teamDolphinsScore >= 100) {
+//   console.log(`Team Dolphin Wins with a Score of 🐬 ${teamDolphinsScore}`);
+// } else if (teamKoalasScore > teamDolphinsScore && teamKoalasScore >= 100) {
+//   console.log(`Team Koalas 🐨 Win with a Score of ${teamKoalasScore}`);
+// } else if (
+//   teamDolphinsScore &&
+//   teamKoalasScore >= 100 &&
+//   teamDolphinsScore === teamKoalasScore
+// ) {
+//   console.log(`There is a draw Dolphins🐬${teamDolphinsScore}
+//      Koalas🐨 ${teamKoalasScore}`);
+// }
