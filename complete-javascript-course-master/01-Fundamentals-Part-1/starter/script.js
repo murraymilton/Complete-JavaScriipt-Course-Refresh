@@ -251,11 +251,11 @@ const ageUser = now - 2019;
 
 // console.log(`Drink made: ${age >= 18 ? "Wine 🍷" : "Water 💦"}`);
 
-let bill = 275;
+// let bill = 275;
 
-const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-console.log(
-  `A tip of $${tip} was added to your bill of $${bill} total bill due:$${
-    tip + bill
-  }`
-);
+// const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// console.log(
+//   `A tip of $${tip} was added to your bill of $${bill} total bill due:$${
+//     tip + bill
+//   }`
+// );
