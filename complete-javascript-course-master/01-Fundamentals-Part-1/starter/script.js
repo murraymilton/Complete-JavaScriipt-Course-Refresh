@@ -199,40 +199,54 @@ const ageUser = now - 2019;
 //      Koalas🐨 ${teamKoalasScore}`);
 // }
 
-let day = "tuesday";
+// let day = "tuesday";
 
-switch (day) {
-  case "monday":
-    console.log("Party");
-    break;
-  case "tuesday":
-    console.log("Study Algos");
-    break;
-  case "wednesday":
-    console.log("Meditation");
-    break;
-  case "thursday":
-    console.log("code challenge");
-    break;
-  case "friday":
-  case "saturday":
-  case "sunday":
-    console.log("Enjoy your long weekend!!!");
-    break;
-  default:
-    console.log("Not a valid day!");
-}
+// switch (day) {
+//   case "monday":
+//     console.log("Party");
+//     break;
+//   case "tuesday":
+//     console.log("Study Algos");
+//     break;
+//   case "wednesday":
+//     console.log("Meditation");
+//     break;
+//   case "thursday":
+//     console.log("code challenge");
+//     break;
+//   case "friday":
+//   case "saturday":
+//   case "sunday":
+//     console.log("Enjoy your long weekend!!!");
+//     break;
+//   default:
+//     console.log("Not a valid day!");
+// }
 
-if (day === "monday") {
-  console.log("monday");
-} else if (day === "tuesday") {
-  console.log("tuesday");
-} else if (day === "wednesday") {
-  console.log("thursday");
-} else if (day === "thursday") {
-  console.log("Tuesday");
-} else if (day === "tuesday") {
-  console.log("Tuesday");
-} else if (day === "tuesday") {
-  console.log("Tuesday");
-}
+// if (day === "monday") {
+//   console.log("monday");
+// } else if (day === "tuesday") {
+//   console.log("tuesday");
+// } else if (day === "wednesday") {
+//   console.log("thursday");
+// } else if (day === "thursday") {
+//   console.log("Tuesday");
+// } else if (day === "tuesday") {
+//   console.log("Tuesday");
+// } else if (day === "tuesday") {
+//   console.log("Tuesday");
+// }
+
+//Statement AND Expressions
+
+// The Conditional (Ternary) Operators
+
+const age = Number(prompt("Enter age:"));
+
+age >= 18 ? console.log("Wine 🍷") : console.log("Water 💦");
+
+//(condition)?(if) "Values:Reference" : "Values:References"
+
+const drinkMaker = age >= 18 ? "Wine 🍷" : "Water 💦";
+
+console.log(`Drink made: ${age >= 18 ? "Wine 🍷" : "Water 💦"}`);
