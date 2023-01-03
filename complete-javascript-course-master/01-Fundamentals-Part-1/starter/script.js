@@ -241,12 +241,19 @@ const ageUser = now - 2019;
 
 // The Conditional (Ternary) Operators
 
-const age = Number(prompt("Enter age:"));
+// const age = Number(prompt("Enter age:"));
 
-age >= 18 ? console.log("Wine 🍷") : console.log("Water 💦");
+// age >= 18 ? console.log("Wine 🍷") : console.log("Water 💦");
 
 //(condition)?(if) "Values:Reference" : "Values:References"
 
-const drinkMaker = age >= 18 ? "Wine 🍷" : "Water 💦";
+// const drinkMaker = age >= 18 ? "Wine 🍷" : "Water 💦";
 
-console.log(`Drink made: ${age >= 18 ? "Wine 🍷" : "Water 💦"}`);
+// console.log(`Drink made: ${age >= 18 ? "Wine 🍷" : "Water 💦"}`);
+
+let bill = 400;
+
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `A tip of $${tip} was added to $${bill} bring bill total:$${tip + bill}`
+);
