@@ -198,3 +198,41 @@ const ageUser = now - 2019;
 //   console.log(`There is a draw Dolphins🐬${teamDolphinsScore}
 //      Koalas🐨 ${teamKoalasScore}`);
 // }
+
+let day = "tuesday";
+
+switch (day) {
+  case "monday":
+    console.log("Party");
+    break;
+  case "tuesday":
+    console.log("Study Algos");
+    break;
+  case "wednesday":
+    console.log("Meditation");
+    break;
+  case "thursday":
+    console.log("code challenge");
+    break;
+  case "friday":
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy your long weekend!!!");
+    break;
+  default:
+    console.log("Not a valid day!");
+}
+
+if (day === "monday") {
+  console.log("monday");
+} else if (day === "tuesday") {
+  console.log("tuesday");
+} else if (day === "wednesday") {
+  console.log("thursday");
+} else if (day === "thursday") {
+  console.log("Tuesday");
+} else if (day === "tuesday") {
+  console.log("Tuesday");
+} else if (day === "tuesday") {
+  console.log("Tuesday");
+}
