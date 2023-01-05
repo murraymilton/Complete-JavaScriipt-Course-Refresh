@@ -9,3 +9,15 @@
 //Reserved keywords
 // const interface = "Audio";
 // const if = 23;
+
+// Functions
+
+function logger() {
+  console.log("Logging data file");
+}
+
+//invoking, calling or running the function
+logger();
+logger();
+logger();
+logger();
