@@ -85,20 +85,52 @@ console.log(yearsUntilRetirement(1991, "Murray"));
 
 // console.log(fruitProcessor(3, 7));
 
-const calcAge = function (birthYear) {
-  return 2037 - birthYear;
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//   const age = calcAge(birthYear);
+//   const retirement = 65 - age;
+
+//   if (retirement <= 0) {
+//     return `${firstName} has already retired`;
+//   } else {
+//     return `${firstName} has ${retirement} years until retirement starts`;
+//   }
+// };
+
+// console.log(yearsUntilRetirement(1991, "Thomas"));
+// console.log(yearsUntilRetirement(1965, "Tommy"));
+
+//Coding Challenge #1
+
+const calcAverage = (scoreOne, scoreTwo, scoreThree) => {
+  const scoreAverage = (scoreOne + scoreTwo + scoreThree) / 3;
+  return scoreAverage;
 };
 
-const yearsUntilRetirement = function (birthYear, firstName) {
-  const age = calcAge(birthYear);
-  const retirement = 65 - age;
+function checkWinner(teamDolphinsAverage, teamKoalasAverage) {
+  teamDolphinsAverage = calcAverage(85, 54, 41);
+  teamKoalasAverage = calcAverage(23, 34, 27);
 
-  if (retirement <= 0) {
-    return `${firstName} has already retired`;
+  if (
+    teamDolphinsAverage > teamKoalasAverage &&
+    teamDolphinsAverage > teamKoalasAverage * 2
+  ) {
+    console.log(
+      `Team Dolphins🐬 win with an average score of ${teamDolphinsAverage} to team Koalas ${teamKoalasAverage}`
+    );
+  } else if (
+    teamKoalasAverage > teamDolphinsAverage &&
+    teamKoalasAverage > teamDolphinsAverage * 2
+  ) {
+    console.log(
+      `Team Koala 🐨 wins with an average score of ${teamKoalasAverage} to Team Dolphins ${teamDolphinsAverage}`
+    );
   } else {
-    return `${firstName} has ${retirement} years until retirement starts`;
+    console.log("No winners to announce!☹️");
   }
-};
+}
 
-console.log(yearsUntilRetirement(1991, "Thomas"));
-console.log(yearsUntilRetirement(1965, "Rick"));
+checkWinner();
