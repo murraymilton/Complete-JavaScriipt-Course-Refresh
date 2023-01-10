@@ -110,27 +110,72 @@ const calcAverage = (scoreOne, scoreTwo, scoreThree) => {
   return scoreAverage;
 };
 
-function checkWinner(teamDolphinsAverage, teamKoalasAverage) {
-  teamDolphinsAverage = calcAverage(85, 54, 41);
-  teamKoalasAverage = calcAverage(23, 34, 27);
+// function checkWinner(teamDolphinsAverage, teamKoalasAverage) {
+//   teamDolphinsAverage = calcAverage(85, 54, 41);
+//   teamKoalasAverage = calcAverage(23, 34, 27);
 
-  if (
-    teamDolphinsAverage > teamKoalasAverage &&
-    teamDolphinsAverage > teamKoalasAverage * 2
-  ) {
-    console.log(
-      `Team Dolphins🐬 win with an average score of ${teamDolphinsAverage} to team Koalas ${teamKoalasAverage}`
-    );
-  } else if (
-    teamKoalasAverage > teamDolphinsAverage &&
-    teamKoalasAverage > teamDolphinsAverage * 2
-  ) {
-    console.log(
-      `Team Koala 🐨 wins with an average score of ${teamKoalasAverage} to Team Dolphins ${teamDolphinsAverage}`
-    );
-  } else {
-    console.log("No winners to announce!☹️");
-  }
-}
+//   if (
+//     teamDolphinsAverage > teamKoalasAverage &&
+//     teamDolphinsAverage > teamKoalasAverage * 2
+//   ) {
+//     console.log(
+//       `Team Dolphins🐬 win with an average score of ${teamDolphinsAverage} to team Koalas ${teamKoalasAverage}`
+//     );
+//   } else if (
+//     teamKoalasAverage > teamDolphinsAverage &&
+//     teamKoalasAverage > teamDolphinsAverage * 2
+//   ) {
+//     console.log(
+//       `Team Koala 🐨 wins with an average score of ${teamKoalasAverage} to Team Dolphins ${teamDolphinsAverage}`
+//     );
+//   } else {
+//     console.log("No winners to announce!☹️");
+//   }
+// }
 
-checkWinner();
+// checkWinner();
+
+//Introductions  to Arrays
+
+// const fruits = [];
+// 2;
+// fruits.length = 10;
+// fruits.push("banana", "apple", "peach");
+// console.log(fruits.length, fruits);
+// fruits.push("strawberries");
+// console.log(fruits.length, fruits);
+
+// Array Declarations
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const years = new Array(1991, 1984, 2002, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]); //Using an expression for index
+
+friends[2] = "Jay";
+
+console.log(friends);
+
+const firstName = "Murray";
+const murray = [
+  firstName,
+  "Milton",
+  2037 - 1991,
+  "Computer Scientist",
+  friends,
+];
+
+// console.log(murray);
+
+// const calcAverages = calcAverage();
+
+// const scores = [86, 75, 45];
+
+// console.log(scores);
+// console.log(calcAverage(scores));
