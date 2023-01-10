@@ -147,29 +147,29 @@ const calcAverage = (scoreOne, scoreTwo, scoreThree) => {
 
 // Array Declarations
 
-const friends = ["Michael", "Steven", "Peter"];
-console.log(friends);
+// const friends = ["Michael", "Steven", "Peter"];
+// console.log(friends);
 
 const years = new Array(1991, 1984, 2002, 2008, 2020);
 
-console.log(friends[0]);
-console.log(friends[2]);
+// console.log(friends[0]);
+// console.log(friends[2]);
 
-console.log(friends.length);
-console.log(friends[friends.length - 1]); //Using an expression for index
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]); //Using an expression for index
 
-friends[2] = "Jay";
+// friends[2] = "Jay";
 
-console.log(friends);
+// console.log(friends);
 
-const firstName = "Murray";
-const murray = [
-  firstName,
-  "Milton",
-  2037 - 1991,
-  "Computer Scientist",
-  friends,
-];
+// const firstName = "Murray";
+// const murray = [
+//   firstName,
+//   "Milton",
+//   2037 - 1991,
+//   "Computer Scientist",
+//   friends,
+// ];
 
 // console.log(murray);
 
@@ -179,3 +179,56 @@ const murray = [
 
 // console.log(scores);
 // console.log(calcAverage(scores));
+
+//Basic Array Methods
+const friends = ["Mark", "Steven", "Peter"];
+//Add Elements to array
+friends.push("Ted"); // Insert an element to the end of the array
+console.log(friends);
+
+friends.unshift("Larry");
+console.log(friends);
+
+// Remove elements
+friends.pop();
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift();
+console.log(friends);
+
+const findFriend = friends.indexOf("Mark");
+console.log(findFriend);
+
+//Note: The includes method uses strict equality
+friends.push(23);
+console.log(friends.includes("Steven")); // No Type Coercion
+console.log(friends.includes(23));
+
+if (friends.includes(23)) {
+  console.log(23 ** 2);
+}
+
+function calcTip(billAmount) {
+  let tipAmount;
+  let finalBill;
+  if (billAmount <= 300) {
+    tipAmount = 0.15 * billAmount;
+    finalBill = billAmount + tipAmount;
+    return `Your bill of ${billAmount} plus tip of $${tipAmount} totals $${finalBill}`;
+  } else if (billAmount > 300) {
+    tipAmount = 0.2 * billAmount;
+    finalBill = billAmount + tipAmount;
+    return `Your bill of ${billAmount} plus tip of $${tipAmount} totals $${finalBill}`;
+  }
+}
+
+const billsList = [125, 555, 44];
+console.log(billsList);
+console.log(calcTip(billsList[0]));
+console.log(calcTip(billsList[1]));
+console.log(calcTip(billsList[2]));
+
+const total = [[calcTip(125)], [calcTip(55)], [calcTip(44)]];
+console.log(total);
