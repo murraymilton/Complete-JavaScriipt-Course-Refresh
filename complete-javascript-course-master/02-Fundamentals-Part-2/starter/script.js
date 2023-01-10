@@ -266,36 +266,69 @@ const total = [[calcTip(125)], [calcTip(55)], [calcTip(44)]];
 
 // Object Methods
 
-const murray = {
-  firstName: "Murray",
-  lastName: "Milton",
-  birthYear: 1991,
-  job: "Computer Scientist",
-  friends: ["Francesca", "Maria", "Chelsea"],
-  hasDriversLicense: true,
+// const murray = {
+//   firstName: "Murray",
+//   lastName: "Milton",
+//   birthYear: 1991,
+//   job: "Computer Scientist",
+//   friends: ["Francesca", "Maria", "Chelsea"],
+//   hasDriversLicense: true,
 
-  // calcAge: function () {
-  //   // console.log(this);
-  //   return 2037 - this.birthYear;
-  // },
+// calcAge: function () {
+//   // console.log(this);
+//   return 2037 - this.birthYear;
+// },
 
-  calcAge: function () {
-    // console.log(this);
-    this.age = 2037 - this.birthYear;
-    return this.age;
-  },
+// calcAge: function () {
+//   // console.log(this);
+//   this.age = 2037 - this.birthYear;
+//   return this.age;
+// },
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()}-year old ${
-      this.job
-    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
-  },
-};
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       this.job
+//     }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+//   },
+// };
 
 // const calcAge2 = function (birthYear) {
 //   return 2037 - 1991;
 // };
-console.log(murray.calcAge());
-console.log(murray.getSummary());
-console.log(murray.age);
-console.log(murray.age);
+// console.log(murray.calcAge());
+// console.log(murray.getSummary());
+// console.log(murray.age);
+// console.log(murray.age);
+
+////////////Coding Challenge # 3
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+
+  calcBMI: function () {
+    this.BMI = this.mass / (this.height * this.height);
+    return this.BMI;
+  },
+};
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.BMI = this.mass / (this.height * this.height);
+    return this.BMI;
+  },
+};
+
+console.log(john.calcBMI(), mark.calcBMI());
+console.log(
+  `${
+    mark.calcBMI() > john.calcBMI()
+      ? `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s (${john.BMI})`
+      : `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})`
+  }`
+);
