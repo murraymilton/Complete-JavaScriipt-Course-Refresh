@@ -183,31 +183,31 @@ const years = new Array(1991, 1984, 2002, 2008, 2020);
 //Basic Array Methods
 const friends = ["Mark", "Steven", "Peter"];
 //Add Elements to array
-friends.push("Ted"); // Insert an element to the end of the array
-console.log(friends);
+// friends.push("Ted"); // Insert an element to the end of the array
+// console.log(friends);
 
-friends.unshift("Larry");
-console.log(friends);
+// friends.unshift("Larry");
+// console.log(friends);
 
 // Remove elements
 friends.pop();
 const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+// console.log(popped);
+// console.log(friends);
 
 friends.shift();
-console.log(friends);
+// console.log(friends);
 
 const findFriend = friends.indexOf("Mark");
-console.log(findFriend);
+// console.log(findFriend);
 
 //Note: The includes method uses strict equality
 friends.push(23);
-console.log(friends.includes("Steven")); // No Type Coercion
-console.log(friends.includes(23));
+// console.log(friends.includes("Steven")); // No Type Coercion
+// console.log(friends.includes(23));
 
 if (friends.includes(23)) {
-  console.log(23 ** 2);
+  // console.log(23 ** 2);
 }
 
 function calcTip(billAmount) {
@@ -225,10 +225,77 @@ function calcTip(billAmount) {
 }
 
 const billsList = [125, 555, 44];
-console.log(billsList);
-console.log(calcTip(billsList[0]));
-console.log(calcTip(billsList[1]));
-console.log(calcTip(billsList[2]));
+// console.log(billsList);
+// console.log(calcTip(billsList[0]));
+// console.log(calcTip(billsList[1]));
+// console.log(calcTip(billsList[2]));
 
 const total = [[calcTip(125)], [calcTip(55)], [calcTip(44)]];
-console.log(total);
+// console.log(total);
+
+//////////////////////////////////////////////
+//Introduction to Objects
+
+// const murray = {
+//   firstName: "Murray",
+//   lastName: "Milton",
+//   age: 2037 - 1991,
+//   job: "teacher",
+//   friends: ["Francesca", "Maria", "Chelsea"],
+// };
+
+// console.log(murray);
+
+//Dot & Bracket Notation
+
+// console.log(murray.lastName); // Dot Notation
+// console.log(murray["age"]); // Bracket Notation
+
+// const nameKey = "Name";
+// console.log(murray["first" + nameKey]);
+// console.log(murray["last" + nameKey]);
+
+// const question = prompt(
+//   "What do you want to know about Murray? Choose between firstName, lastName, age, job, and friends"
+// );
+// console.log(murray[question]);
+
+// console.log(
+//   `${murray.firstName} has ${murray.friends.length} friends, and his best friend is ${murray.friends[0]}`
+// );
+
+// Object Methods
+
+const murray = {
+  firstName: "Murray",
+  lastName: "Milton",
+  birthYear: 1991,
+  job: "Computer Scientist",
+  friends: ["Francesca", "Maria", "Chelsea"],
+  hasDriversLicense: true,
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    // console.log(this);
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      this.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+  },
+};
+
+// const calcAge2 = function (birthYear) {
+//   return 2037 - 1991;
+// };
+console.log(murray.calcAge());
+console.log(murray.getSummary());
+console.log(murray.age);
+console.log(murray.age);
