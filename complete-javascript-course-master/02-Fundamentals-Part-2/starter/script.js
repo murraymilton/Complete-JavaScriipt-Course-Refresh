@@ -347,7 +347,8 @@ const total = [[calcTip(125)], [calcTip(55)], [calcTip(44)]];
 //   console.log(`Lifting weights repetition ${k} 🏋️`);
 // }
 
-const favSportTeams = ["Dallas", "LA", "New Orleans", "Tampa Bay", 22];
+/*
+const favSportTeams = ["Dallas", "LA", 43, "New Orleans", "Tampa Bay", 22];
 const types = [];
 for (let i = 0; i < favSportTeams.length; i++) {
   types[i] = typeof favSportTeams[i];
@@ -362,4 +363,34 @@ for (let k = 1; k < 50; k++) {
     number.push(k, "fizz-buzz");
     console.log(number);
   }
+}
+
+//continue and break
+console.log("----- ONLY STRINGS ----");
+for (let j = 0; j < favSportTeams.length; j++) {
+  if (typeof favSportTeams[j] !== "string") continue;
+  console.log(favSportTeams[j], typeof favSportTeams[j]);
+}
+
+console.log("----- BREAK WITH NUMBERS ----");
+for (let l = 0; l < favSportTeams.length; l++) {
+  if (typeof favSportTeams[l] === "number") break;
+  console.log(favSportTeams[l], typeof favSportTeams[l]);
+}
+
+
+
+
+
+
+
+
+
+*/
+
+//Looping Backwards
+const favSportTeams = ["Dallas", "LA", 43, "New Orleans", "Tampa Bay", 22];
+
+for (let i = favSportTeams.length - 1; i >= 0; i--) {
+  console.log(favSportTeams[i]);
 }
