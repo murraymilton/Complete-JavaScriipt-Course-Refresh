@@ -302,33 +302,64 @@ const total = [[calcTip(125)], [calcTip(55)], [calcTip(44)]];
 
 ////////////Coding Challenge # 3
 
-const mark = {
-  fullName: "Mark Miller",
-  mass: 78,
-  height: 1.69,
+// const mark = {
+//   fullName: "Mark Miller",
+//   mass: 78,
+//   height: 1.69,
 
-  calcBMI: function () {
-    this.BMI = this.mass / (this.height * this.height);
-    return this.BMI;
-  },
-};
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height);
+//     return this.BMI;
+//   },
+// };
 
-const john = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
 
-  calcBMI: function () {
-    this.BMI = this.mass / (this.height * this.height);
-    return this.BMI;
-  },
-};
+//   calcBMI: function () {
+//     this.BMI = this.mass / (this.height * this.height);
+//     return this.BMI;
+//   },
+// };
 
-console.log(john.calcBMI(), mark.calcBMI());
-console.log(
-  `${
-    mark.calcBMI() > john.calcBMI()
-      ? `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s (${john.BMI})`
-      : `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})`
-  }`
-);
+// console.log(john.calcBMI(), mark.calcBMI());
+// console.log(
+//   `${
+//     mark.calcBMI() > john.calcBMI()
+//       ? `${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s (${john.BMI})`
+//       : `${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s (${mark.BMI})`
+//   }`
+// );
+
+// console.log(typeof typeof 123);
+
+//////Iteration:The for Loop
+
+//const fruits = ["bananas", "watermelon", "papaya", "strawberries"];
+
+//for (let i = 0; i < fruits.length; i++) {
+// console.log(fruits[i]);
+//}
+
+// for (let k = 1; k < 10; k++) {
+//   console.log(`Lifting weights repetition ${k} 🏋️`);
+// }
+
+const favSportTeams = ["Dallas", "LA", "New Orleans", "Tampa Bay", 22];
+const types = [];
+for (let i = 0; i < favSportTeams.length; i++) {
+  types[i] = typeof favSportTeams[i];
+  console.log(favSportTeams[i]);
+}
+console.log(types);
+
+let number = [];
+
+for (let k = 1; k < 50; k++) {
+  if (k % 3 === 0 && k % 5 === 0) {
+    number.push(k, "fizz-buzz");
+    console.log(number);
+  }
+}
