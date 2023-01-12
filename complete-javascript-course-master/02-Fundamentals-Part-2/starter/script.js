@@ -210,19 +210,23 @@ if (friends.includes(23)) {
   // console.log(23 ** 2);
 }
 
-function calcTip(billAmount) {
-  let tipAmount;
-  let finalBill;
-  if (billAmount <= 300) {
-    tipAmount = 0.15 * billAmount;
-    finalBill = billAmount + tipAmount;
-    return `Your bill of ${billAmount} plus tip of $${tipAmount} totals $${finalBill}`;
-  } else if (billAmount > 300) {
-    tipAmount = 0.2 * billAmount;
-    finalBill = billAmount + tipAmount;
-    return `Your bill of ${billAmount} plus tip of $${tipAmount} totals $${finalBill}`;
-  }
-}
+// function calcTip(billAmount) {
+//   let tipAmount;
+//   let finalBill;
+//   if (billAmount <= 300) {
+//     tipAmount = 0.15 * billAmount;
+//     finalBill = billAmount + tipAmount;
+//     return `Your bill  $${Math.trunc(finalBill)}`;
+//   } else if (billAmount > 300) {
+//     tipAmount = 0.2 * billAmount;
+//     finalBill = billAmount + tipAmount;
+//     return `Your bill of  $${Math.trunc(finalBill)}`;
+//   }
+// }
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 15 : bill * 0.2;
+};
 
 const billsList = [125, 555, 44];
 // console.log(billsList);
@@ -389,8 +393,70 @@ for (let l = 0; l < favSportTeams.length; l++) {
 */
 
 //Looping Backwards
+
+/*
+
+
+
 const favSportTeams = ["Dallas", "LA", 43, "New Orleans", "Tampa Bay", 22];
 
 for (let i = favSportTeams.length - 1; i >= 0; i--) {
   console.log(favSportTeams[i]);
 }
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-------------- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Lifting weight repetition ${rep} 🏋️`);
+  }
+}
+
+
+
+
+
+
+
+*/
+
+// let rep = 1;
+
+// while (rep <= 10) {
+//   // console.log(`Lifting weights repetition ${rep} 🏋️`);
+//   rep++;
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+// // console.log(dice);
+
+// while (dice !== 6) {
+//   console.log(`You rolled a ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+//   if (dice === 6) console.log("Loop is about to end ......");
+// }
+
+//Challenge #4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+  const tip = calcTip(bills.length[i]);
+  tips.push(tip);
+  totals.push(tip + bills[i]);
+}
+
+console.log(bills, tips, totals);
+
+const calcAverages = function (arr) {
+  let sum = 0;
+  for (let k = 0; k < arr.length; k++) {
+    sum += arr[k];
+  }
+  return sum / arr.length;
+};
+
+let newAvg = calcAverages([2, 3, 9, 15]);
+console.log(newAvg);
